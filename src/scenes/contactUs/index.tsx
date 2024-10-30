@@ -67,7 +67,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 <form
                 target="_blank"
                 onSubmit={onSubmit}
-                action="https://formsubmit.co/fb7da772ade07998e4860108a4c33144"
+                action="https://formsubmit.co/brainy229@gmail.com"
                 method="POST"
                 className="">
 
@@ -90,7 +90,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                     <input
                     className={inputStyles}
                     type="text"
-                    placeholder="Email"
+                    placeholder="EMAIL"
                     {...register("email",{
                         required: true,
                         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
