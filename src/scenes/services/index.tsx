@@ -64,6 +64,8 @@ const Services = ({setSelectedPage}: Props) => {
             className="mt:5 items-center justify-between gap-8 md:flex"
             initial="hidden"
             whileInView="visible"
+            whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
             viewport={{ once: false, amount: 0.5 }}
             variants={ container }
             >

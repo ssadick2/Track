@@ -36,7 +36,9 @@ const AboutUs = ({setSelectedPage}: Props) => {
     className="w-full bg-primary-100 py-40 ">
 
       <motion.div
-      onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
+      onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}
+      >
+        
 
         <motion.div
         className="mx-auto w-5/6 "
@@ -47,6 +49,7 @@ const AboutUs = ({setSelectedPage}: Props) => {
             variants={{ 
                 hidden: { opacity: 0, x:-50},
                 visible: { opacity: 1, x: 0},
+                
              }}
              >
 

@@ -5,6 +5,7 @@ import Link from "./Link";
 import { SelectedPage } from "./shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery"
 import ActionButton from "./shared/ActionButton";
+import { motion } from "framer-motion";
 
 
 type Props = {
@@ -20,7 +21,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
     const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
   return (
     <nav>
-        <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
+        <motion.div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 `}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}>
             <div className={`${flexBetween} mx-auto w-5/6`}>
 
             <div className={`${flexBetween} w-full gap-16 `}>
@@ -40,7 +43,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                         <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                     </div>
                     <div className={`${flexBetween} gap-8 `}>
-                        <p>Sign In</p>
+                        <p className="hover:bg-primary-100 rounded-full p-6">Sign In</p>
                         <ActionButton setSelectedPage={setSelectedPage}>Join Us</ActionButton>
                     </div>
 
@@ -59,7 +62,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
 
             </div>
 
-        </div>
+        </motion.div>
         {/* Mobile Menu Modal*/}
         {!isAboveMediumScreens && isMenuToggled && (
             <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
